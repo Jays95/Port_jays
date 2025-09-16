@@ -1167,7 +1167,6 @@
 <body>
   <div class="cosmic-overlay cosmic-bg"></div>
   <canvas class="nebula-bg" id="matrix"></canvas>
-
   <!-- Navigation -->
   <nav class="nav-bar">
     <div class="nav-content">
@@ -1177,59 +1176,35 @@
         <li><a href="#about" class="ripple">About</a></li>
         <li><a href="#skills" class="ripple">Skills</a></li>
         <li><a href="#projects" class="ripple">Projects</a></li>
+        <li><a href="#certificates" class="ripple">Certificates</a></li>
         <li><a href="#customize" class="ripple">Customize</a></li>
         <li><a href="#contact" class="ripple">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero-section">
-  <div class="particles" id="particles"></div>
-  <div class="hero-content">
-    
-    <!-- Profile Image with Circular Style -->
-   <img src="{{ url_for('static', filename='images/jayson-ranck.jpg') }}" alt="Jayson Ranck" class="profile-pic">
-
-    <!-- AI Animation -->
-    <img
-      src="https://scitechdaily.com/images/AI-Technology-Creation-Concept.gif"
-      alt="3D Sphere Animation"
-      class="ai-gif"
-      loading="eager"
-      width="500"
-      height="300"
-      data-parallax="0.5"
-    />
-
-    <!-- Headline and CTA -->
-    <h1 class="glitch" data-text="Jayson Ranck">Jayson Ranck</h1>
-    <div class="subtitle">Flask | AI Developer | Problem Solver</div>
-    <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; transform: translateZ(10px); color: #ffffff; z-index: 30;">
-      Explore my Code Cosmos! 🚀
-    </p>
-    <a href="#projects" class="cta-button glow ripple">Explore My Work</a>
-  </div>
-</section>
-
-<!-- Style Block (place this in <head> or external CSS file) -->
-<style>
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1rem;
-  }
-
-  .profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-  }
-</style>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <img src="{{ url_for('static', filename='images/jayson-ranck.jpg') }}" alt="Jayson Ranck" class="profile-pic">
+      <img
+        src="https://scitechdaily.com/images/AI-Technology-Creation-Concept.gif"
+        alt="3D Sphere Animation"
+        class="ai-gif"
+        loading="eager"
+        width="500"
+        height="300"
+        data-parallax="0.5"
+      />
+      <h1 class="glitch" data-text="Jayson Ranck">Jayson Ranck</h1>
+      <div class="subtitle">Flask | AI Developer | Problem Solver</div>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; transform: translateZ(10px); color: #ffffff; z-index: 30;">
+        Explore my Code Cosmos! 🚀
+      </p>
+      <a href="#projects" class="cta-button glow ripple">Explore My Work</a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="section about-section">
@@ -1248,15 +1223,31 @@
       </div>
       <div class="glass">
         <h3 style="margin-bottom: 1rem; font-family: 'Orbitron', sans-serif;">Jayson Ranck</h3>
-        <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
-          I'm a Flask and AI developer focused on building user-friendly applications. I specialize in Python, creating solutions for web development, automation, data processing, and AI-driven tools.
-        </p>
-        <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
-          My approach to problem-solving is structured and clear, aiming to deliver reliable and effective results. I'm passionate about meaningful work and continuously improving my technical skills.
-        </p>
-        <p style="color: #ffffff; font-weight: normal;">
-          Outside of coding, I enjoy spending time outdoors and with my partner. Baseball is a favorite hobby, offering a balance of strategy and rhythm that I find inspiring in both life and work.
-        </p>
+        <div class="about-content">
+          <div class="about-text active" id="about-text-1">
+            <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
+              I'm a Flask and AI developer focused on building user-friendly applications. I specialize in Python, creating solutions for web development, automation, data processing, and AI-driven tools.
+            </p>
+            <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
+              My approach to problem-solving is structured and clear, aiming to deliver reliable and effective results. I'm passionate about meaningful work and continuously improving my technical skills.
+            </p>
+            <p style="color: #ffffff; font-weight: normal;">
+              Outside of coding, I enjoy spending time outdoors and with my partner. Baseball is a favorite hobby, offering a balance of strategy and rhythm that I find inspiring in both life and work.
+            </p>
+          </div>
+          <div class="about-text" id="about-text-2" style="display: none;">
+            <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
+              I’m an easygoing soul who finds joy in the simple things, being immersed in nature, staying close to the people I love, and living with intention. I believe that kindness, compassion, and love aren’t just ideals—they’re daily choices that shape how I move through the world.
+            </p>
+            <p style="margin-bottom: 1rem; color: #ffffff; font-weight: normal;">
+              Words hold power, and I choose to use mine to uplift, encourage, and breathe life into others. Whether it’s a heartfelt conversation or a quiet moment of support, I strive to be a source of positivity wherever I go.
+            </p>
+            <p style="color: #ffffff; font-weight: normal;">
+              ⚾ Staying active is a big part of who I am. I love playing baseball—it keeps me sharp, energized, and connected to the rhythm of teamwork and discipline. I also prioritize fitness and wellness, not just for physical health but for mental clarity and balance. I’m a lifelong learner, always curious and eager to grow. Reading opens new worlds for me, and I’m constantly exploring new ideas, perspectives, and skills that help me evolve both personally and professionally.
+            </p>
+          </div>
+          <button class="toggle-button ripple" onclick="toggleAboutText()">Next</button>
+        </div>
       </div>
     </div>
   </section>
@@ -1339,7 +1330,7 @@
         <h3 class="project-link-title">HyperionDev Software Engineer Bootcamp Portfolio</h3>
         <a href="https://www.hyperiondev.com/portfolio/289469/" target="_blank" class="project-link ripple">View Portfolio</a>
       </div>
-      <div class="project-link-item">
+      <div class="project-link-item no-line">
         <h3 class="project-link-title">Google Drive Portfolio</h3>
         <a href="https://drive.google.com/drive/folders/15rfnidJ4USZQr8_98XH7rFTPBMsF6I7X" target="_blank" class="project-link ripple">View Folder</a>
       </div>
@@ -1413,7 +1404,7 @@
             <span class="tech-tag">BERT</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link ripple">Live Demo</a>
+            <a href="https://sentiment-dashboard-evzvmpqgutwht5bubgbh4u.streamlit.app/" class="project-link ripple">Live Demo</a>
           </div>
         </div>
       </div>
@@ -1444,6 +1435,216 @@
     </div>
   </section>
 
+  <!-- Certificates Section -->
+  <section id="certificates" class="section">
+    <h2 class="section-title no-line">Certificates</h2>
+    <div class="glass" style="margin-bottom: 3rem;">
+      <h3 style="color: #ffffff; margin-bottom: 1rem; font-family: 'Orbitron', sans-serif;">Select Category</h3>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <button class="bg-button ripple" onclick="showCategory('ai-bootcamp')">AI Bootcamp</button>
+        <button class="bg-button ripple" onclick="showCategory('professional-development')">Professional Development</button>
+        <button class="bg-button ripple" onclick="showCategory('technical-support')">Technical Support</button>
+        <button class="bg-button ripple" onclick="showCategory('completion-badges')">Completion Badges</button>
+      </div>
+    </div>
+    <div class="certificates-grid">
+      <!-- AI Bootcamp Certificates -->
+      <div class="certificate-category" id="ai-bootcamp">
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI and Climate Change.jpg') }}" alt="AI and Climate Change" class="certificate-img">
+          <p class="certificate-desc">Using AI to address climate change challenges.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI and Disaster Management.jpg') }}" alt="AI and Disaster Management" class="certificate-img">
+          <p class="certificate-desc">Applying AI for effective disaster response strategies.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI and Public Health.jpg') }}" alt="AI and Public Health" class="certificate-img">
+          <p class="certificate-desc">Leveraging AI to improve public health outcomes.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI Essentials.jpg') }}" alt="AI Essentials" class="certificate-img">
+          <p class="certificate-desc">Core concepts of artificial intelligence applications.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI For Everyone.jpg') }}" alt="AI For Everyone" class="certificate-img">
+          <p class="certificate-desc">Introduction to AI for non-technical audiences.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI Foundations Prompt Engineering with ChatGPT.jpg') }}" alt="AI Foundations Prompt Engineering with ChatGPT" class="certificate-img">
+          <p class="certificate-desc">Mastering prompt engineering for AI chatbots.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Artificial Intelligence on Microsoft Azure.jpg') }}" alt="Artificial Intelligence on Microsoft Azure" class="certificate-img">
+          <p class="certificate-desc">Building AI solutions using Microsoft Azure.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Building AI Powered Chatbots Without Programming.jpg') }}" alt="Building AI Powered Chatbots Without Programming" class="certificate-img">
+          <p class="certificate-desc">Creating AI chatbots without coding skills.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Generative AI with Large Language Models.jpg') }}" alt="Generative AI with Large Language Models" class="certificate-img">
+          <p class="certificate-desc">Exploring generative AI and large language models.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Human Factors in AI.jpg') }}" alt="Human Factors in AI" class="certificate-img">
+          <p class="certificate-desc">Understanding human-AI interaction principles.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Introduction to Artificial Intelligence (AI).jpg') }}" alt="Introduction to Artificial Intelligence (AI)" class="certificate-img">
+          <p class="certificate-desc">Fundamentals of artificial intelligence concepts.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Introduction to Generative AI.jpg') }}" alt="Introduction to Generative AI" class="certificate-img">
+          <p class="certificate-desc">Basics of generative AI technologies.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Introduction to Responsible AI.jpg') }}" alt="Introduction to Responsible AI" class="certificate-img">
+          <p class="certificate-desc">Principles of ethical AI development.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Machine Learning Foundations for Product Managers.jpg') }}" alt="Machine Learning Foundations for Product Managers" class="certificate-img">
+          <p class="certificate-desc">Machine learning basics for product management.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Supervised Machine Learning Regression and Classification.jpg') }}" alt="Supervised Machine Learning Regression and Classification" class="certificate-img">
+          <p class="certificate-desc">Supervised learning for regression and classification.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Trustworthy AI Managing Bias, Ethics, and Accountability.jpg') }}" alt="Trustworthy AI Managing Bias, Ethics, and Accountability" class="certificate-img">
+          <p class="certificate-desc">Managing bias and ethics in AI.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/Unsupervised Learning, Recommenders, Reinforcement Learning.jpg') }}" alt="Unsupervised Learning, Recommenders, Reinforcement Learning" class="certificate-img">
+          <p class="certificate-desc">Unsupervised, recommender, and reinforcement learning techniques.</p>
+        </div>
+      </div>
+      <!-- Professional Development Certificates -->
+      <div class="certificate-category" id="professional-development" style="display: none;">
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Active Listening Enhancing Communication Skills.jpg') }}" alt="Active Listening Enhancing Communication Skills" class="certificate-img">
+          <p class="certificate-desc">Improving communication through active listening skills.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/ChatGPT + Zapier Easy Inbox Intelligence for Smarter Email.jpg') }}" alt="ChatGPT + Zapier Easy Inbox Intelligence for Smarter Email" class="certificate-img">
+          <p class="certificate-desc">Automating email tasks with ChatGPT and Zapier.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Customer Service Fundamentals.jpg') }}" alt="Customer Service Fundamentals" class="certificate-img">
+          <p class="certificate-desc">Core principles of effective customer service.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Developing Interpersonal Skills.jpg') }}" alt="Developing Interpersonal Skills" class="certificate-img">
+          <p class="certificate-desc">Building strong interpersonal communication skills.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Emotional Intelligence.jpg') }}" alt="Emotional Intelligence" class="certificate-img">
+          <p class="certificate-desc">Enhancing emotional intelligence for better relationships.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Grit and Growth Mindset.jpg') }}" alt="Grit and Growth Mindset" class="certificate-img">
+          <p class="certificate-desc">Developing resilience and a growth mindset.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Leading with Impact Team Dynamics, Strategy and Ethics.jpg') }}" alt="Leading with Impact Team Dynamics, Strategy and Ethics" class="certificate-img">
+          <p class="certificate-desc">Leading teams with strategy and ethics.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Managing Conflicts with Cultural and Emotional Intelligence.jpg') }}" alt="Managing Conflicts with Cultural and Emotional Intelligence" class="certificate-img">
+          <p class="certificate-desc">Resolving conflicts using cultural and emotional intelligence.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Negotiation skills Negotiate and resolve conflict.jpg') }}" alt="Negotiation skills Negotiate and resolve conflict" class="certificate-img">
+          <p class="certificate-desc">Mastering negotiation and conflict resolution skills.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Positive Psychology Resilience Skills.jpg') }}" alt="Positive Psychology Resilience Skills" class="certificate-img">
+          <p class="certificate-desc">Building resilience through positive psychology.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Preparation for Job Interviews.jpg') }}" alt="Preparation for Job Interviews" class="certificate-img">
+          <p class="certificate-desc">Strategies for successful job interviews.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Psychology of the Self.jpg') }}" alt="Psychology of the Self" class="certificate-img">
+          <p class="certificate-desc">Understanding self-awareness and personal growth.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Solving Problems with Creative and Critical Thinking.jpg') }}" alt="Solving Problems with Creative and Critical Thinking" class="certificate-img">
+          <p class="certificate-desc">Creative and critical problem-solving techniques.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Verbal Communications and Presentation Skills.jpg') }}" alt="Verbal Communications and Presentation Skills" class="certificate-img">
+          <p class="certificate-desc">Effective verbal communication and presentation skills.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Work Smarter, Not Harder Time Management for Personal & Professional Productivity.jpg') }}" alt="Work Smarter, Not Harder Time Management" class="certificate-img">
+          <p class="certificate-desc">Time management for enhanced productivity.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Write Professional Emails in English.jpg') }}" alt="Write Professional Emails in English" class="certificate-img">
+          <p class="certificate-desc">Crafting professional emails in English.</p>
+        </div>
+      </div>
+      <!-- Technical Support Certificates -->
+      <div class="certificate-category" id="technical-support" style="display: none;">
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Introduction to Hardware and Operating Systems.jpg') }}" alt="Introduction to Hardware and Operating Systems" class="certificate-img">
+          <p class="certificate-desc">Basics of computer hardware and operating systems.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/IT Security Defense against the digital dark arts.jpg') }}" alt="IT Security Defense against the digital dark arts" class="certificate-img">
+          <p class="certificate-desc">Protecting systems from digital security threats.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Operating Systems and You Becoming a Power User.jpg') }}" alt="Operating Systems and You Becoming a Power User" class="certificate-img">
+          <p class="certificate-desc">Advanced skills in operating system usage.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Sound the Alarm Detection and Response.jpg') }}" alt="Sound the Alarm Detection and Response" class="certificate-img">
+          <p class="certificate-desc">Cybersecurity incident detection and response techniques.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/System Administration and IT Infrastructure Services.jpg') }}" alt="System Administration and IT Infrastructure Services" class="certificate-img">
+          <p class="certificate-desc">Managing IT infrastructure and system administration.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Technical Support (IT) Case Studies and Capstone.jpg') }}" alt="Technical Support (IT) Case Studies and Capstone" class="certificate-img">
+          <p class="certificate-desc">Practical IT support case studies and capstone.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Technical Support Fundamentals.jpg') }}" alt="Technical Support Fundamentals" class="certificate-img">
+          <p class="certificate-desc">Core concepts of IT technical support.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/The Bits and Bytes of Computer Networking.jpg') }}" alt="The Bits and Bytes of Computer Networking" class="certificate-img">
+          <p class="certificate-desc">Fundamentals of computer networking principles.</p>
+        </div>
+      </div>
+      <!-- Completion Badges -->
+      <div class="certificate-category" id="completion-badges" style="display: none;">
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/AI Bootcamp/AI bootcamp completion badge.png') }}" alt="AI Bootcamp Completion Badge" class="certificate-img">
+          <p class="certificate-desc">Completed comprehensive AI Bootcamp training.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Professional Development/Professional Development completion badge.png') }}" alt="Professional Development Completion Badge" class="certificate-img">
+          <p class="certificate-desc">Completed professional development training program.</p>
+        </div>
+        <div class="certificate-card">
+          <img src="{{ url_for('static', filename='images/Technical Support/Technical support completion badge.png') }}" alt="Technical Support Completion Badge" class="certificate-img">
+          <p class="certificate-desc">Completed technical support training program.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal for Enlarged Image -->
+    <div class="certificate-modal" id="certificateModal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </section>
+
   <!-- Customize Section -->
   <section id="customize" class="section">
     <h2 class="section-title">Customize Experience</h2>
@@ -1453,6 +1654,10 @@
         <button class="bg-button ripple" onclick="setBackground('cosmic-bg')">Dark Mosaic</button>
         <button class="bg-button ripple" onclick="setBackground('circuit-bg')">Circuit Board</button>
         <button class="bg-button ripple" onclick="setBackground('binary-bg')">Binary Rain</button>
+        <button class="bg-button ripple" onclick="setBackground('neon-cityscape')">Neon Cityscape</button>
+        <button class="bg-button ripple" onclick="setBackground('sci-fi-glow')">Sci-Fi Glow</button>
+        <button class="bg-button ripple" onclick="setBackground('digital-lines')">Digital Lines</button>
+        <button class="bg-button ripple" onclick="setBackground('cosmic-nebula')">Cosmic Nebula</button>
       </div>
     </div>
   </section>
@@ -1495,6 +1700,7 @@
     <p class="footer-text">&copy; 2025 Jayson Ranck. Crafted with passion and code.</p>
   </footer>
 
+  <!-- JavaScript -->
   <script>
     // Background switching
     function setBackground(bg) {
@@ -1525,11 +1731,74 @@
       skillCards.forEach(card => card.className = 'skill-card hologram glow ripple ' + theme);
       projectLinkItems.forEach(item => {
         const isHighlight = item.classList.contains('highlight-item');
-        item.className = `project-link-item ${theme} ${isHighlight ? 'highlight-item' : ''}`;
+        const isNoLine = item.classList.contains('no-line');
+        item.className = `project-link-item ${theme} ${isHighlight ? 'highlight-item' : ''} ${isNoLine ? 'no-line' : ''}`;
       });
 
       localStorage.setItem('theme', theme);
     }
+
+    // Certificate category switching
+    function showCategory(category) {
+      const categories = document.querySelectorAll('.certificate-category');
+      categories.forEach(cat => {
+        cat.style.display = cat.id === category ? 'grid' : 'none';
+      });
+    }
+
+    // Modal for enlarged certificate image
+    function openModal(src, alt, desc) {
+      const modal = document.getElementById('certificateModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      modal.style.display = 'block';
+      modalImg.src = src;
+      modalImg.alt = alt;
+      modalCaption.textContent = desc;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('certificateModal');
+      modal.style.display = 'none';
+    }
+
+    // Toggle About Me text
+    function toggleAboutText() {
+      const text1 = document.getElementById('about-text-1');
+      const text2 = document.getElementById('about-text-2');
+      const button = document.querySelector('.toggle-button');
+      if (text1.classList.contains('active')) {
+        text1.classList.remove('active');
+        text1.style.display = 'none';
+        text2.classList.add('active');
+        text2.style.display = 'block';
+        button.textContent = 'Previous';
+      } else {
+        text2.classList.remove('active');
+        text2.style.display = 'none';
+        text1.classList.add('active');
+        text1.style.display = 'block';
+        button.textContent = 'Next';
+      }
+    }
+
+    // Add click event listeners to certificate images
+    document.querySelectorAll('.certificate-img').forEach(img => {
+      img.addEventListener('click', () => {
+        const src = img.src;
+        const alt = img.alt;
+        const desc = img.nextElementSibling.textContent;
+        openModal(src, alt, desc);
+      });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('certificateModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
 
     // Load saved background and theme
     const savedBg = localStorage.getItem('background') || 'cosmic-bg';
@@ -1710,6 +1979,7 @@
     window.addEventListener('load', () => {
       createParticles();
       createSkillCloud();
+      showCategory('ai-bootcamp'); // Show AI Bootcamp by default
     });
 
     // Resize handler for particles
@@ -1718,5 +1988,185 @@
       createSkillCloud();
     });
   </script>
+
+  <!-- Additional Styles for Certificates Section, Modal, About Toggle, and Backgrounds -->
+  <style>
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .certificate-category {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    .certificate-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .certificate-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    }
+
+    .certificate-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .certificate-desc {
+      color: #ffffff;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .certificate-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: auto;
+    }
+
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    .modal-caption {
+      color: #ffffff;
+      text-align: center;
+      margin-top: 1rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    /* Remove lines under Google Drive and above Certificates heading */
+    .project-link-item.no-line {
+      border-bottom: none !important;
+    }
+
+    .project-link-item.no-line::after {
+      display: none !important;
+    }
+
+    .section-title.no-line {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    .section-title.no-line::before,
+    .section-title.no-line::after {
+      display: none !important;
+    }
+
+    /* About text toggle styles */
+    .about-content {
+      position: relative;
+    }
+
+    .about-text {
+      transition: opacity 0.3s ease;
+    }
+
+    .about-text.active {
+      opacity: 1;
+    }
+
+    .toggle-button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Background styles */
+    .cosmic-overlay.cosmic-bg {
+      background: url('https://example.com/dark-mosaic.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.circuit-bg {
+      background: url('https://example.com/circuit-board.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.binary-bg {
+      background: url('https://example.com/binary-rain.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.neon-cityscape {
+      background: url('https://i.pinimg.com/originals/14/08/06/140806233603521.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.sci-fi-glow {
+      background: url('https://i.pinimg.com/originals/10/62/57/10625749117088030.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.digital-lines {
+      background: url('https://i.pinimg.com/originals/28/21/79/28217935160053326.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .cosmic-overlay.cosmic-nebula {
+      background: url('https://i.pinimg.com/originals/54/18/46/5418462046693961.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.7;
+    }
+  </style>
 </body>
-</html>
