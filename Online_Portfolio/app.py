@@ -31,7 +31,7 @@ def index():
             'badge': 'AI bootcamp completion badge.png'
         },
         {
-            'name': 'Professional Devlopment',
+            'name': 'Professional Development',
             'images': [
                 'Active Listening Enhancing Communication Skills.jpg',
                 'ChatGPT + Zapier Easy Inbox Intelligence for Smarter Email.jpg',
@@ -72,3 +72,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
